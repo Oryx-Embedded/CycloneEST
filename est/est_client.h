@@ -6,7 +6,7 @@
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
- * Copyright (C) 2024-2025 Oryx Embedded SARL. All rights reserved.
+ * Copyright (C) 2024-2026 Oryx Embedded SARL. All rights reserved.
  *
  * This file is part of CycloneEST Open.
  *
@@ -25,7 +25,7 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  * @author Oryx Embedded SARL (www.oryx-embedded.com)
- * @version 2.5.4
+ * @version 2.6.0
  **/
 
 #ifndef _EST_CLIENT_H
@@ -64,13 +64,13 @@
 #endif
 
 //Version string
-#define CYCLONE_EST_VERSION_STRING "2.5.4"
+#define CYCLONE_EST_VERSION_STRING "2.6.0"
 //Major version
 #define CYCLONE_EST_MAJOR_VERSION 2
 //Minor version
-#define CYCLONE_EST_MINOR_VERSION 5
+#define CYCLONE_EST_MINOR_VERSION 6
 //Revision number
-#define CYCLONE_EST_REV_NUMBER 4
+#define CYCLONE_EST_REV_NUMBER 0
 
 //EST client support
 #ifndef EST_CLIENT_SUPPORT
@@ -224,6 +224,7 @@ struct _EstClientContext
 {
    EstClientState state;                                    ///<EST client state
    EstRequestState requestState;                            ///<HTTP request state
+   NetContext *netContext;                                  ///<TCP/IP stack context
    NetInterface *interface;                                 ///<Underlying network interface
    systime_t timeout;                                       ///<Timeout value
    const PrngAlgo *prngAlgo;                                ///<Pseudo-random number generator to be used
