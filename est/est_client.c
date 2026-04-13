@@ -30,7 +30,7 @@
  * over CMS (CMC) over a secure transport. Refer to RFC 7030 for more details
  *
  * @author Oryx Embedded SARL (www.oryx-embedded.com)
- * @version 2.6.0
+ * @version 2.6.2
  **/
 
 //Switch to the appropriate trace level
@@ -217,7 +217,7 @@ error_t estClientSetHost(EstClientContext *context, const char_t *host)
 /**
  * @brief Set path prefix
  * @param[in] context Pointer to the EST client context
- * @param[in] uri NULL-terminated string that contains the path prefix
+ * @param[in] pathPrefix NULL-terminated string that contains the path prefix
  * @return Error code
  **/
 
